@@ -40,7 +40,7 @@ public class InsertARecord {
     public boolean problem1() {
         // write your SQL logic in a single line in the problem1.sql file.
 
-        String sql = "INSERT INTO song(title,artist) VALUES('Let it be','Beatles'),('Hotel California','Eagles'),('Kashmir','Led Zeppelin')";
+        String sql = FileUtil.parseSQLFile("problem1.sql");
         try {
             Connection connection = ConnectionUtil.getConnection();
             Statement s = connection.createStatement();
